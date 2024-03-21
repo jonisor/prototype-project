@@ -1,6 +1,9 @@
 export const ROUTES = {
     SCREENS: {
         FEED: 'Feed',
-        ACCOUNT: 'Account'
+        FEED_LIST: 'FeedList',
+        FEED_SINGLE: 'FeedSingle',
+        ACCOUNT: 'Account',
+        ACCOUNT_MAIN: 'Account main'
     }
 } as const;

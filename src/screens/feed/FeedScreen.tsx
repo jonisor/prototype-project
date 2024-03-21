@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native"
-import { baseColors } from "../../theme"
-import { HeaderComponent } from "../components/HeaderComponent"
+import { baseColors } from "../../../theme"
+import { HeaderComponent } from "../../components/HeaderComponent"
 
 export const FeedScreen = () => {
     return (<View style={styles.container}>
