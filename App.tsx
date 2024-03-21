@@ -1,13 +1,12 @@
 import React from 'react';
 import {
   SafeAreaView,
-  ScrollView,
   StatusBar,
   useColorScheme,
-  View,
 } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native'
 import {baseColors} from './theme'
-import {HeaderComponent} from './src/components/HeaderComponent'
+import { AppNavigator } from './src/navigation/AppNavigator';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -23,16 +22,9 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? baseColors.neutrals.black : baseColors.neutrals.white,
-          }}>
-          <HeaderComponent title='Prototype'/>
-        </View>
-      </ScrollView>
+      <NavigationContainer>
+        <AppNavigator />
+      </NavigationContainer>
     </SafeAreaView>
   );
 }

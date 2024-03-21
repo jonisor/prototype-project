@@ -1,6 +1,6 @@
 export const ROUTES = {
     SCREENS: {
-        HOME: 'Home',
-        SETTINGS: 'Settings'
+        FEED: 'Feed',
+        ACCOUNT: 'Account'
     }
 } as const;
